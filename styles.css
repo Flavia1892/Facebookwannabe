@@ -7,5 +7,26 @@ body{
 .container-mare{
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+   
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    flex:1;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    flex:2;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    flex:1;
 }
