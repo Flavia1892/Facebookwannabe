@@ -1,0 +1,11 @@
+body{
+    background-color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.container-mare{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
