@@ -1,30 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-    background-color: rgb(190, 187, 187);
+    background-color: aquamarine;
     font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
 
 }
 
-.header {
+
+.nav {
     display: flex;
-    flex: row;
-    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
     height: 80px;
-    column-gap: 20px;
-    padding-top: 22px;
+    background-color: white;
     border-top: 2px solid grey;
     border-bottom: 2px solid grey;
-
+    padding: 0 10px;
+    overflow-y: hidden;
 }
 
 
 .headerleft {
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: auto;
     flex: 1;
+    /*flex grow/shrink/basis*/
     justify-content: flex-start;
+    align-items: center;
     column-gap: 20px;
 }
 
@@ -32,7 +38,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    margin-top: -22px;
+    margin-bottom: 3px;
 }
 
 .search {
@@ -79,12 +85,15 @@ body {
 
 /*Aici lucrez la partea centrala din header*/
 .headercenter {
+
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex: 2;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
     column-gap: 20px;
-    margin-top:5px;
+
 }
 
 .button {
@@ -106,15 +115,15 @@ body {
 
 /*Aici lucrez la partea din extrema dreapta a header*/
 .headerright {
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
     flex: 1;
-    margin-left: 330px;
     column-gap: 20px;
-    margin-top: -7px;
-    margin-right: 20px;
+
 }
 
 .icons {
@@ -139,11 +148,13 @@ body {
     border-radius: 50%;
     border: 2px solid rgb(31, 134, 230);
 }
-.poza:hover{
+
+.poza:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    padding:10px;
+    padding: 10px;
 }
+
 .icons:hover {
     color: rgb(139, 137, 137);
     background-color: white;
@@ -151,35 +162,105 @@ body {
     cursor: pointer;
     opacity: 0.6;
 }
+
 /*Aici se incheie header modifications*/
+
+/*Aici lucram la continut facebook index page*/
 .container-mare {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    column-gap: 80px;
     height: 100%;
+   
 }
 
+/*left side of index page start*/
 .left {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     flex: 1;
     flex-wrap: wrap;
+    background-color: rgb(235, 231, 231);
+    cursor: pointer;
+    
 }
 
+.card {
+    height: auto;
+    border-bottom: 2px solid grey;
+    padding: 20px;
+    border-top: whitesmoke;
+    background-color: rgb(235, 231, 231);
+
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(235, 231, 231);
+    margin: 20px;
+    border: none;
+}
+
+.profile:hover {
+    background-color: rgb(218, 208, 208);
+}
+
+.nume {
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul li {
+    line-height: 60px;
+    list-style-type: none;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul li:hover {
+    background-color: rgb(218, 208, 208);
+}
+
+.scris {
+    text-decoration: none;
+    color: black;
+}
+
+/*center side of index page start*/
 .center {
     display: flex;
     flex-direction: column;
     background-color: red;
     flex: 2;
     flex-wrap: wrap;
+}
 
+.center::-webkit-scrollbar {
+    display: none;
+}
+
+.center {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .right {
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-color: rgb(235, 231, 231);
     flex: 1;
     flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.scrisdr {
+    font-size: 19px;
 }
