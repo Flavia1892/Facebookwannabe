@@ -3,7 +3,7 @@
 body {
     background-color: aquamarine;
     font-family: 'Times New Roman', Times, serif;
-    height: 100vh;
+    min-height: 100vh;
 
 }
 
@@ -33,7 +33,7 @@ body {
 .headerleft {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /flex-wrap: wrap;
     height: auto;
     flex: 1;
     /*flex grow/shrink/basis*/
@@ -121,6 +121,10 @@ body {
 
 }
 
+.button:active {
+    background-color: rgb(144, 144, 209);
+}
+
 /*Aici lucrez la partea din extrema dreapta a header*/
 .headerright {
 
@@ -190,6 +194,9 @@ body {
     flex-wrap: wrap;
     background-color: rgb(235, 231, 231);
     cursor: pointer;
+    position: sticky;
+    height: 900px;
+    top: 0;
 }
 
 .card {
@@ -245,7 +252,7 @@ ul li:hover {
     background-color: red;
     flex: 2;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     row-gap: 30px;
 }
 
@@ -279,13 +286,18 @@ ul li:hover {
 
 .cardcenter {
     border-bottom: 5px solid grey;
-    border-radius: 10%;
+    border-radius: 4%;
     height: auto;
     padding: 10px 20px;
     margin: 10px 30px;
     background-color: antiquewhite;
     text-align: center;
     cursor: pointer;
+}
+
+.centerwrite {
+    text-align: center;
+    font-size: 30px;
 }
 
 .imgcenter {
@@ -305,11 +317,15 @@ ul li:hover {
     /* Firefox */
 }
 
+/*Right side of index*/
+
 .right {
     display: flex;
     flex-direction: column;
     background-color: rgb(235, 231, 231);
     flex: 1;
+    position: sticky;
+    top: 0;
     flex-wrap: wrap;
     height: 100vh;
     overflow-y: auto;
@@ -358,19 +374,55 @@ ul li:hover {
         width: 480px;
     }
 
-    .left .center .right {
+    .left {
+
         width: auto;
         height: auto;
-        overflow-x: hidden;
+        overscroll-behavior-y: contain;
+        position: relative;
+    }
+
+    .card {
+
+        width: auto;
+        height: auto;
     }
 
 
 
-    /*.nav {
-                display: flex;
-        flex-direction: column;
-    }*/
+    .nav {
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 5px;
 
-    
+    }
+
+    .headerleft {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headercenter {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .headerright {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+
 
 }
