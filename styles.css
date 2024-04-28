@@ -7,22 +7,30 @@ body {
 
 }
 
+.navbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 20;
+    /*This stopped the divs in container-mare to scroll undernavbar*/
+    background-color: plum;
+    padding: 0 0;
+}
 
 .nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     height: 80px;
+    width: 100%;
     background-color: white;
     border-top: 2px solid grey;
     border-bottom: 2px solid grey;
     padding: 0 10px;
-    overflow-y: hidden;
 }
 
 
 .headerleft {
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -171,8 +179,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 80px;
-    height: 100%;
-   
+
 }
 
 /*left side of index page start*/
@@ -183,7 +190,6 @@ body {
     flex-wrap: wrap;
     background-color: rgb(235, 231, 231);
     cursor: pointer;
-    
 }
 
 .card {
@@ -219,7 +225,7 @@ body {
 ul li {
     line-height: 60px;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -239,6 +245,53 @@ ul li:hover {
     background-color: red;
     flex: 2;
     flex-wrap: wrap;
+    overflow-y: scroll;
+    row-gap: 30px;
+}
+
+.containerpoze {
+    background-color: blueviolet;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 300px;
+    width: 870px;
+    column-gap: 10px;
+    padding: 20px 80px;
+
+}
+
+.cardpoze {
+    border-radius: 10%;
+    padding: 0;
+}
+
+.pozesus {
+    width: 150px;
+    height: 250px;
+    border-radius: 10%;
+}
+
+.pozesus:hover {
+    transform: scale(1.1);
+}
+
+.cardcenter {
+    border-bottom: 5px solid grey;
+    border-radius: 10%;
+    height: auto;
+    padding: 10px 20px;
+    margin: 10px 30px;
+    background-color: antiquewhite;
+    text-align: center;
+    cursor: pointer;
+}
+
+.imgcenter {
+    width: 300px;
+    height: 270px;
+    border-radius: 10%;
 }
 
 .center::-webkit-scrollbar {
@@ -258,9 +311,66 @@ ul li:hover {
     background-color: rgb(235, 231, 231);
     flex: 1;
     flex-wrap: wrap;
+    height: 100vh;
     overflow-y: auto;
+    overscroll-behavior-y: contain;
 }
 
 .scrisdr {
     font-size: 19px;
+}
+
+
+.friendcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: auto;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.friendcard:hover {
+    background-color: rgb(218, 208, 208);
+}
+
+.profilepict {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    background-image: linear-gradient(black, rgb(34, 33, 33), rgb(98, 97, 97), rgb(180, 174, 174));
+}
+
+
+/*Start of Media Querry*/
+@media screen and (max-width:600px) {
+    .container-mare {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+
+    .containerpoze {
+        width: 480px;
+    }
+
+    .left .center .right {
+        width: auto;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+
+
+    /*.nav {
+                display: flex;
+        flex-direction: column;
+    }*/
+
+    
+
 }
