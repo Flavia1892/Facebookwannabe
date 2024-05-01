@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-    background-color: aquamarine;
+    background-color: rgb(235, 231, 231);
     font-family: 'Times New Roman', Times, serif;
     min-height: 100vh;
 
@@ -24,8 +24,8 @@ body {
     height: 80px;
     width: 100%;
     background-color: white;
-    border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
+    border-top: 2px solid rgb(190, 189, 189);
+    border-bottom: 2px solid rgb(190, 189, 189);
     padding: 0 10px;
 }
 
@@ -194,16 +194,18 @@ body {
     flex-wrap: wrap;
     background-color: rgb(235, 231, 231);
     cursor: pointer;
-    position: sticky;
     height: 900px;
+    position: sticky;
     top: 0;
 }
 
 .card {
     height: auto;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid rgb(190, 189, 189);
     padding: 20px;
     border-top: whitesmoke;
+    border-right: none;
+    border-left: none;
     background-color: rgb(235, 231, 231);
 
 }
@@ -245,11 +247,15 @@ ul li:hover {
     color: black;
 }
 
+.footer {
+    border: none;
+}
+
 /*center side of index page start*/
 .center {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: rgb(235, 231, 231);
     flex: 2;
     flex-wrap: wrap;
     overflow-y: auto;
@@ -257,7 +263,7 @@ ul li:hover {
 }
 
 .containerpoze {
-    background-color: blueviolet;
+    background-color: rgb(235, 231, 231);
     overflow-x: scroll;
     display: flex;
     flex-direction: row;
@@ -278,19 +284,22 @@ ul li:hover {
     width: 150px;
     height: 250px;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 .pozesus:hover {
     transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    filter: brightness(90%);
 }
 
 .cardcenter {
-    border-bottom: 5px solid grey;
+    border-bottom: 2px solid rgb(190, 189, 189);
     border-radius: 4%;
     height: auto;
     padding: 10px 20px;
     margin: 10px 30px;
-    background-color: antiquewhite;
+    background-color: white;
     text-align: center;
     cursor: pointer;
 }
@@ -397,6 +406,8 @@ ul li:hover {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        position: sticky;
+        bottom: 0;
         row-gap: 5px;
 
     }
